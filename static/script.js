@@ -10,6 +10,16 @@ const stateLayer = L.geoJson(null, {
   onEachFeature: onEachFeature,
 });
 
+const camp_icon = L.icon({
+  iconUrl: 'assets/campground.png',
+  iconSize:     [36, 36]
+});
+
+const train_icon = L.icon({
+  iconUrl: 'assets/train.png',
+  iconSize:     [36, 36]
+});
+
 function seconds_to_days_hours_mins_secs_str(seconds) {
   var days = Math.floor(seconds / (24 * 60 * 60));
   seconds -= days * (24 * 60 * 60);
@@ -163,9 +173,13 @@ days.forEach((day) => {
         setup_layer(day.layer);
       };
       if (pt.type === "campground") {
+        L.marker([pt.coordinates[1], pt.coordinates[0]], {icon: camp_icon}).addTo(map).bindPopup(pt.name);
         li.innerText = `🏕️ ${pt.name}`;
       } else if (pt.type === "train") {
+        L.marker([pt.coordinates[1], pt.coordinates[0]], {icon: train_icon}).addTo(map).bindPopup(pt.name);
         li.innerText = `🚆 ${pt.name}`;
+      }
+      if (pt.type !== "waypoint") {
       }
       inner_list.appendChild(li);
     }

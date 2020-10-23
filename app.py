@@ -6,9 +6,7 @@ import requests_cache
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
-
 OPENROUTESERVICE_API_KEY = os.environ.get("ORS_API_KEY")
-print(OPENROUTESERVICE_API_KEY)
 
 requests_cache.install_cache(allowable_methods=["GET", "POST"])
 app = Flask(__name__, static_url_path="/static")
