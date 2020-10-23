@@ -1,0 +1,61 @@
+
+
+body, div {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#header {
+    position: relative;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+}
+
+#body {
+    height: calc(100vh - 100px);
+}
+
+#map {
+    height: 100%;
+    width: calc(100vw - 400px);
+    float: left;
+}
+
+#infopane {
+    height: 100%;
+    width: 380px;
+    float: right;
+    position: relative;
+    overflow-y: auto;
+}
+
+#segment {
+    overflow-y: auto;
+}
+
+#days {
+    height: calc(100% - 140px);
+    overflow-y: auto;
+}
+
+#segment_pane {
+    display: none;
+}
+
+#total {
+    height: 140px;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+}

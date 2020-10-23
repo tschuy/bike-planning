@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Cycling Map</title>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+<link rel='stylesheet' href="style.css"></link>
+<script src="script.js" async></script>
+</head>
+<body>
+<div id="header">
+    <h1>Cycling</h1>
+</div>
+<div id="body">
+    <div id="map"></div>
+    <div id="infopane">
+        <div id="segment_pane">
+            <div id="segment">
+                <h2 id="segment_name">Route Info</h2>
+                <span id="to_days_pane">🡄</span>
+                <ul>
+                    <li>Distance: <span id="distance"></span></li>
+                    <li>Estimated time on bike: <span id="duration"></span></li>
+                </ul>
+                <h2>Directions</h2>
+                <ol id="directions"></ol>
+            </div>
+        </div>
+        <div id="days_pane">
+            <div id="days">
+                <h2 id="days_title">Days</h2>
+                <ol id="days_list"></ol>
+            </div>
+            <div id="total">
+                <hr>
+                <h2>Total</h2>
+                <ul>
+                    <li>Distance: <span id="distance_total"></span></li>
+                    <li>Estimated time on bike: <span id="duration_total"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
